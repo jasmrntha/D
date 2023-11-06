@@ -48,3 +48,6 @@ Route::get('/uts', function () {
 Route::get('/uts-validation', function () {
     return view('validation');
 });
+
+Route::get('perkalian', 'App\Http\Controllers\DosenController@index');
+Route::get('show', 'App\Http\Controllers\DosenController@showblog');
