@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    color: blueviolet;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+h3 {
+    text-align: center;
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: dotted;
+}
+
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-style: italic;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.kotak {
+    border-style: groove;
+    border-radius: 0cm;
+    border-color: bisque;
+    padding: 1cm;
+    font-family: 'Courier New', Courier, monospace;
+}
+

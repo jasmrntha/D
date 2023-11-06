@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    background-color: rgb(255, 183, 0);
+}
+.jasmine_div1 {
+    margin: auto;
+    text-align: center;
+    padding: 5%;
+    font-size: 87%;
+    overflow: hidden;
+    position: relative;
+    width: 700px;
+}
+.jasmine_img {
+    border-radius: 50%;
+    width: 20%;
+}
+.jasmine_hrefbutton {
+    background-color: white;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s;
+    width: 97%;
+    height: 97%;
+    border: 2px solid black;
+}
+.jasmine_hrefbutton:hover {
+    transform: translate(5px, 4px);
+}
+.jasmine_icon {
+    width: 28px;
+    margin: 5px 0px 7px 5px;
+}
+.jasmine_buttonspan {
+    flex-grow:1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+.jasmine_iconhref {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 7px 3px 7px 3px;
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+}
+.jasmine_hrefbutton:hover .jasmine_iconhref {
+    opacity: 1;
+}
+.jasmine_buttoncontainer {
+    background-color: none;
+    text-decoration: none;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 20px;
+    box-shadow: 10px 10px rgb(7, 17, 102);
+}
+.jasmine_buttonbellalert {
+    border-radius: 30px;
+    border-color: transparent;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 42px;
+    cursor: pointer;
+}
+.jasmine_buttonalertspan {
+    flex-grow:1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 7000;
+}
+.jasmine_buttondotsalert {
+    border-radius: 23px;
+    border-color: transparent;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}
