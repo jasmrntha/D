@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DosenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,13 +42,28 @@ Route::get('/linktree', function () {
     return view('linktree');
 });
 
-Route::get('/uts', function () {
-    return view('index');
-});
+// Route::get('/uts', function () {
+//     return view('ujiantengahsemester');
+// });
+// Route::get('/uts', [DosenController::class, 'getUts']);
+Route::get('/ujian-tengah-semester', 'App\Http\Controllers\DosenController@getUts');
 
-Route::get('/uts-validation', function () {
+Route::get('/uts/validation', function () {
     return view('validation');
 });
 
 Route::get('perkalian', 'App\Http\Controllers\DosenController@index');
 Route::get('show', 'App\Http\Controllers\DosenController@showblog');
+
+Route::get('/pegawai/{nama}', [DosenController::class, 'showNama']);
+
+Route::get('/formulir', [DosenController::class, 'formulir']);
+Route::post('/formulir/proses', [DosenController::class, 'proses']);
+
+Route::get('/master', function() {
+    return view('master');
+});
+
+Route::get('/blog', 'App\Http\Controllers\BlogController@home');
+Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
+Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
