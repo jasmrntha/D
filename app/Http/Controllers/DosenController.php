@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Queue\Jobs\RedisJob;
+use Illuminate\Support\Facades\DB;
 
 class DosenController extends Controller
 {
@@ -35,5 +37,44 @@ class DosenController extends Controller
 
     public function getUts(){
         return view('ujiantengahsemester');
+    }
+
+    public function getDosen(){
+        $dosen = DB::table('dosen')->get();
+        return view('dosen-view.indexDosen', ['dosen' => $dosen]);
+    }
+
+    public function viewAddDosen(){
+        return view('dosen-view.addDosen');
+    }
+
+    public function addDosen(Request $request){
+        DB::table('dosen')->insert([
+            'nama' => $request->nama,
+            'umur' => $request->umur,
+            'jabatan' => $request->jabatan,
+            'alamat' => $request->alamat
+        ]);
+        return redirect('/dosen/index');
+    }
+
+    public function viewUpdateDosen($id){
+        $dosen = DB::table('dosen')->where('id', $id)->get();
+        return view('dosen-view.editDosen', ['dosen' => $dosen]);
+    }
+
+    public function updateDosen(Request $request){
+        DB::table('dosen')->where('id', $request->id)->update([
+            'nama' => $request->nama,
+            'umur' => $request->umur,
+            'jabatan' => $request->jabatan,
+            'alamat' => $request->alamat
+        ]);
+        return redirect('/dosen/index');
+    }
+
+    public function deleteDosen($id){
+        DB::table('dosen')->where('id', $id)->delete();
+        return redirect('/dosen/index');
     }
 }

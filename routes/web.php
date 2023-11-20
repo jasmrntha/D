@@ -67,3 +67,13 @@ Route::get('/master', function() {
 Route::get('/blog', 'App\Http\Controllers\BlogController@home');
 Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
 Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
+
+Route::get('/dosen/index', [DosenController::class, 'getDosen']);
+
+Route::get('/dosen/add', [DosenController::class, 'viewAddDosen']);
+Route::post('/dosen/add-dosen', [DosenController::class, 'addDosen']);
+
+Route::get('/dosen/edit/{id}', [DosenController::class, 'viewUpdateDosen']);
+Route::post('/dosen/edit-dosen', [DosenController::class, 'UpdateDosen']);
+
+Route::get('/dosen/delete-dosen/{id}', [DosenController::class, 'deleteDosen']);
