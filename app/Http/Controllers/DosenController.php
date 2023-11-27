@@ -40,7 +40,7 @@ class DosenController extends Controller
     }
 
     public function getDosen(){
-        $dosen = DB::table('dosen')->get();
+        $dosen = DB::table('dosen')->paginate(10);
         return view('dosen-view.indexDosen', ['dosen' => $dosen]);
     }
 
@@ -76,5 +76,11 @@ class DosenController extends Controller
     public function deleteDosen($id){
         DB::table('dosen')->where('id', $id)->delete();
         return redirect('/dosen/index');
+    }
+
+    public function cariDosen(Request $request){
+        $cari = $request->cari;
+        $dosen = DB::table('dosen')->where('nama', 'like', '%'.$cari.'%')->paginate(10);
+        return view('dosen-view.indexDosen',['dosen' => $dosen]);
     }
 }

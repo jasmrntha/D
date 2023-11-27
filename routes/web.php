@@ -77,3 +77,5 @@ Route::get('/dosen/edit/{id}', [DosenController::class, 'viewUpdateDosen']);
 Route::post('/dosen/edit-dosen', [DosenController::class, 'UpdateDosen']);
 
 Route::get('/dosen/delete-dosen/{id}', [DosenController::class, 'deleteDosen']);
+
+Route::get('/dosen/cari', [DosenController::class, 'cariDosen']);
