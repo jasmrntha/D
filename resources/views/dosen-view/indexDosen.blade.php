@@ -1,23 +1,22 @@
 @extends('master2')
 
-@section('title', 'Database Pegawai')
+@section('title', 'Database Dosen')
 
 @section('judul_halaman')
     <h2>www.malasngoding.com</h2>
-    <h3>Data Pegawai</h3>
+    <h3>Data Dosen</h3>
 
-    <a href="/dosen/add" class="btn btn-info">Tambah Pegawai Baru</a>
+    <a href="/dosen/add" class="btn btn-primary">Tambah Dosen Baru</a>
 
     <br />
     <br />
 @endsection
 
 @section('konten')
-    <h5>Cari Data Pegawai :</h5>
-    <form action="/dosen/cari" method="GET">
+    <h5>Cari Data Dosen :</h5>
+    <form action="/dosen/cari" method="GET" class="d-md-flex justify-content-md-end">
         <input type="text" name="cari" placeholder="cari dosen" value="{{ old('cari') }}" class="form-control">
-        <br>
-        <input type="submit" value="search" class="btn btn-info">
+        <input type="submit" value="search" class="btn btn-primary">
     </form>
     <br><br>
     <table border="1" class="table table-strip table-hover">
@@ -35,9 +34,9 @@
                 <td>{{ $p->umur }}</td>
                 <td>{{ $p->alamat }}</td>
                 <td>
-                    <a href="/dosen/edit/{{ $p->id }}" class="btn btn-success">Edit</a>
-                    |
+                    <a href="/dosen/edit/{{ $p->id }}" class="btn btn-warning">Edit</a>
                     <a href="/dosen/delete-dosen/{{ $p->id }}" class="btn btn-danger">Hapus</a>
+                    <a href="/dosen/view/{{ $p->id }}" class="btn btn-info">View</a>
                 </td>
             </tr>
         @endforeach

@@ -83,4 +83,9 @@ class DosenController extends Controller
         $dosen = DB::table('dosen')->where('nama', 'like', '%'.$cari.'%')->paginate(10);
         return view('dosen-view.indexDosen',['dosen' => $dosen]);
     }
+
+    public function viewDosen($id){
+        $dosen = DB::table('dosen')->where('id', $id)->get();
+        return view('dosen-view.viewDosen', ['dosen' => $dosen]);
+    }
 }

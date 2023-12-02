@@ -3,7 +3,7 @@
 @section('konten')
     <h3>Data Pegawai</h3>
 
-    <a href="/dosen/index" class="btn btn-info"> Kembali</a>
+    <a href="/dosen/index" class="btn btn-primary"> Kembali</a>
 
     <br />
     <br />
