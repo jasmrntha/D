@@ -31,7 +31,13 @@
             <tr>
                 <td>{{ $p->nama }}</td>
                 <td>{{ $p->jabatan }}</td>
-                <td>{{ $p->umur }}</td>
+
+                @if ( ($p->umur) <= 30 )
+                    <td class="bg-dark text-light">{{ $p->umur }}</td>
+                @elseif( ($p->umur) >= 31 )
+                    <td class="bg-danger text-light">{{ $p->umur }}</td>
+                @endif
+
                 <td>{{ $p->alamat }}</td>
                 <td>
                     <a href="/dosen/edit/{{ $p->id }}" class="btn btn-warning">Edit</a>
@@ -39,7 +45,7 @@
                     <a href="/dosen/view/{{ $p->id }}" class="btn btn-info">View</a>
                 </td>
             </tr>
-        @endforeach
+        @endforeach 
     </table>
 
     {{ $dosen->links() }}

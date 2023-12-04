@@ -86,6 +86,6 @@ class DosenController extends Controller
 
     public function viewDosen($id){
         $dosen = DB::table('dosen')->where('id', $id)->get();
-        return view('dosen-view.viewDosen', ['dosen' => $dosen]);
+        return view('dosen-view.viewDosen', ['pegawai' => $dosen]);
     }
 }

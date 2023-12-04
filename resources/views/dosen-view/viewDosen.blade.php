@@ -15,7 +15,7 @@
             </div>
 
             <div style="width: 50%; height: 100%; margin-left: 50px; padding: 20px">
-                @foreach ($dosen as $d)
+                @foreach ($pegawai as $d)   
                     <div style="padding: 10px">
                         <span style="font-weight: 700; font-size: 156%">Nama: </span>
                         <span style="font-size: 156%">{{ $d->nama}}</span>

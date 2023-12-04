@@ -10,11 +10,22 @@
 
     <form action="/dosen/add-dosen" method="post">
         {{ csrf_field() }}
-        Nama <input type="text" name="nama" class="form-control"> <br />
-        Jabatan <input type="text" name="jabatan" class="form-control"> <br />
-        Umur <input type="number" name="umur" class="form-control"> <br />
-        Alamat
-        <textarea name="alamat" class="form-control"></textarea> <br />
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nama</span>
+            <input type="text" name="nama" class="form-control"> <br />
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Jabatan</span>
+            <input type="text" name="jabatan" class="form-control"> <br />
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Umur</span>
+            <input type="number" name="umur" class="form-control"> <br />
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Alamat</span>
+            <textarea name="alamat" class="form-control"></textarea> <br />
+        </div>
         <input type="submit" value="Simpan Data" class="btn btn-success">
     </form>
 @endsection
