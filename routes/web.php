@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\nilaiKuliahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,3 +82,7 @@ Route::get('/dosen/delete-dosen/{id}', [DosenController::class, 'deleteDosen']);
 Route::get('/dosen/cari', [DosenController::class, 'cariDosen']);
 
 Route::get('/dosen/view/{id}', [DosenController::class, 'viewDosen']);
+
+Route::get('/nilai/index', [nilaiKuliahController::class, 'indexNilai']);
+Route::post('/nilai/add', [nilaiKuliahController::class, 'tambahNilai']);
+Route::get('/nilai/add', [nilaiKuliahController::class, 'tambahNilaiView']);
