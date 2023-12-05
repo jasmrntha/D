@@ -28,6 +28,7 @@
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="/dosen/index">Dosen</a>
                   <a class="dropdown-item" href="/nilai/index">Nilai Kuliah</a>
+                  <a class="dropdown-item" href="/penggaris/index">Pra Eas</a>
                 </div>
               </li>
             </ul>

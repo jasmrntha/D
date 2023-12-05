@@ -414,6 +414,9 @@
             <a href="{{ url('/style') }}" class="nav-link active">style</a>
             <a href="{{ url('/tes') }}" class="nav-link active">tes</a>
             <a href="{{ url('/uts') }}" class="nav-link active">uts</a>
+            <a href="{{ url('/dosen/index')}}">dosen</a>
+            <a href="{{ url('nilai/index')}}">nilaikuliah</a>
+            <a href="{{ url('penggaris/index')}}">pra-eas</a>
         </div>
     </nav>
 

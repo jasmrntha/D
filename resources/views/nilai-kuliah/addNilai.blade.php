@@ -1,4 +1,4 @@
-@extends('master')
+@extends('master2')
 
 @section('konten')
     <h3>Data Nilai</h3>
