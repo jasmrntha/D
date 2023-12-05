@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\nilaiKuliahController;
+use App\Http\Controllers\penggarisController;
+use Illuminate\Routing\RouteGroup;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,3 +88,10 @@ Route::get('/dosen/view/{id}', [DosenController::class, 'viewDosen']);
 Route::get('/nilai/index', [nilaiKuliahController::class, 'indexNilai']);
 Route::post('/nilai/add', [nilaiKuliahController::class, 'tambahNilai']);
 Route::get('/nilai/add', [nilaiKuliahController::class, 'tambahNilaiView']);
+
+Route::get('/penggaris/index', [penggarisController::class, 'indexPenggaris']);
+Route::post('/penggaris/add', [penggarisController::class, 'tambahPenggaris']);
+Route::get('/penggaris/add', [penggarisController::class, 'tambahPenggarisView']);
+Route::post('/penggaris/edit', [penggarisController::class, 'editPenggaris']);
+Route::get('/penggaris/edit/{id}', [penggarisController::class, 'editPenggarisView']);
+Route::get('/penggaris/delete/{id}', [penggarisController::class, 'deletePenggaris']);
