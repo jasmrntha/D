@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\nilaiKuliahController;
 use App\Http\Controllers\penggarisController;
-use Illuminate\Routing\RouteGroup;
+use App\Http\Controllers\easController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,11 +45,13 @@ Route::get('/linktree', function () {
     return view('linktree');
 });
 
-// Route::get('/uts', function () {
-//     return view('ujiantengahsemester');
+// Route::get('/ujian-tengah-semester', function () {
+//     return view('resources/views/uts.blade.php');
 // });
+
 // Route::get('/uts', [DosenController::class, 'getUts']);
-Route::get('/ujian-tengah-semester', 'App\Http\Controllers\DosenController@getUts');
+
+Route::get('/ujian-tengah-semester', 'App\Http\Controllers\DosenController@showuts');
 
 Route::get('/uts/validation', function () {
     return view('validation');
@@ -95,3 +97,8 @@ Route::get('/penggaris/add', [penggarisController::class, 'tambahPenggarisView']
 Route::post('/penggaris/edit', [penggarisController::class, 'editPenggaris']);
 Route::get('/penggaris/edit/{id}', [penggarisController::class, 'editPenggarisView']);
 Route::get('/penggaris/delete/{id}', [penggarisController::class, 'deletePenggaris']);
+
+Route::get('/eas/index', [easController::class, 'index']);
+Route::get('/eas/delete/{kodepegawai}', [easController::class, 'delete']);
+Route::post('/eas/insert', [easController::class, 'insert']);
+Route::get('/eas/insert', [easController::class, 'viewInsert']);

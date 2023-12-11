@@ -9,6 +9,10 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Styles -->
     <style>
@@ -413,10 +417,11 @@
             <a href="{{ url('/latihan1') }}" class="nav-link active">latihan1</a>
             <a href="{{ url('/style') }}" class="nav-link active">style</a>
             <a href="{{ url('/tes') }}" class="nav-link active">tes</a>
-            <a href="{{ url('/uts') }}" class="nav-link active">uts</a>
-            <a href="{{ url('/dosen/index')}}">dosen</a>
-            <a href="{{ url('nilai/index')}}">nilaikuliah</a>
-            <a href="{{ url('penggaris/index')}}">pra-eas</a>
+            <a href="{{ url('/ujian-tengah-semester') }}" class="nav-link active">uts</a>
+            <a href="{{ url('/dosen/index')}}">Pegawai</a>
+            <a href="{{ url('/nilai/index')}}">Nilai Kuliah</a>
+            <a href="{{ url('/penggaris/index')}}">Pra-EAS</a>
+            <a href="{{ url('/eas/index')}}">Karyawan</a>
         </div>
     </nav>
 

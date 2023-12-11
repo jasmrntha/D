@@ -19,22 +19,25 @@
             <a class="navbar-brand" href="#">5026221107 - jasmine Saimarantha Br Ginting</a>
 
             <ul class="navbar-nav">
-
-              <!-- Dropdown -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                  Links
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/dosen/index">Dosen</a>
-                  <a class="dropdown-item" href="/nilai/index">Nilai Kuliah</a>
-                  <a class="dropdown-item" href="/penggaris/index">Pra Eas</a>
-                </div>
-              </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Links
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/dosen/index">Pegawai</a>
+                        <a class="dropdown-item" href="/nilai/index">Nilai Kuliah</a>
+                        <a class="dropdown-item" href="/penggaris/index">Pra Eas</a>
+                        <a class="dropdown-item" href="/eas/index">Eas</a>
+                    </div>
+                </li>
             </ul>
         </nav>
 
-        <br/>
+        <br />
 
         <!-- bagian judul halaman blog -->
         @yield('judul_halaman')

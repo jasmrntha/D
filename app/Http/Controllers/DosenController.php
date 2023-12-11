@@ -35,8 +35,8 @@ class DosenController extends Controller
         return "Nama : ".$nama.", Alamat : ".$alamat;
     }
 
-    public function getUts(){
-        return view('ujiantengahsemester');
+    public function showuts(){
+        return view('uts');
     }
 
     public function getDosen(){

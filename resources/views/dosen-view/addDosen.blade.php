@@ -8,24 +8,37 @@
     <br />
     <br />
 
-    <form action="/dosen/add-dosen" method="post">
+    <form action="/dosen/add-dosen" method="post" class="form-horizontal">
         {{ csrf_field() }}
-        <div class="input-group mb-3">
-            <span class="input-group-text">Nama</span>
-            <input type="text" name="nama" class="form-control"> <br />
+
+        <div class = "input-group mb-3">
+            <span for = "nama" class="input-group-text col-sm-1">Nama</span>
+            <div class = "col-sm-11">
+                <input type ="text" class="form-control" name= "nama" id="nama" placeholder = "Masukkan Nama">
+            </div>
         </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text">Jabatan</span>
-            <input type="text" name="jabatan" class="form-control"> <br />
+
+        <div class = "input-group mb-3">
+            <span for="jabatan" class="input-group-text col-sm-1">Jabatan</span>
+            <div class = "col-sm-11">
+                <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Masukkan Jabatan">
         </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text">Umur</span>
-            <input type="number" name="umur" class="form-control"> <br />
         </div>
+
         <div class="input-group mb-3">
-            <span class="input-group-text">Alamat</span>
-            <textarea name="alamat" class="form-control"></textarea> <br />
+            <label for="umur" class="input-group-text col-sm-1">Umur</label>
+            <div class = "col-sm-11">
+                <input type="number" class="form-control" id="umur" name="umur" placeholder="Masukkan Umur">
         </div>
-        <input type="submit" value="Simpan Data" class="btn btn-success">
+        </div>
+
+        <div class="input-group mb-3">
+            <label for="alamat" class="input-group-text col-sm-1">Alamat</label>
+            <div class = "col-sm-11">
+                <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat">
+        </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary" value="Simpan Data">Simpan Data</button>
     </form>
 @endsection
