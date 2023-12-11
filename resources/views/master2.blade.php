@@ -41,7 +41,7 @@
 
         <!-- bagian judul halaman blog -->
         @yield('judul_halaman')
-        @yield('title')
+        <h2>@yield('title')</h2>
         {{-- @yield('header') tidak akan mengeluarkan error jika tidak ada isinya --}}
         @yield('konten')
 

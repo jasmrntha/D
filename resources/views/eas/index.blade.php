@@ -4,7 +4,6 @@
 
 @section('judul_halaman')
     <h2>www.malasngoding.com</h2>
-    <h3>Data Karyawan</h3>
     <br />
     <br />
 @endsection
